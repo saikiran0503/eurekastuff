@@ -1,0 +1,11 @@
+button {
+    padding: 15px 65px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+#go {
+    background-color: rgb(155, 146, 131);
+}
