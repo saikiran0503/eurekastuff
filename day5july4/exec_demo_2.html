@@ -1,0 +1,19 @@
+<script>
+    console.log('Global Code Starts Here...') //1
+    function f3() {
+        console.log('f3 starts')//4
+        console.log('f3 ends')//5
+    }
+    function f2() {
+        console.log('f2 starts')//3
+        f3()
+        console.log('f2 ends')//6
+    }
+    function f1() {
+        console.log('f1 starts')//2
+        f2()
+        console.log('f1 ends')//7
+    }
+    f1();
+    console.log('Global Code Ends Here...')//8
+</script>
