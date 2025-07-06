@@ -1,0 +1,10 @@
+<script>
+    let arr =[10,20,30,40,50];
+    let result1 = arr.map(function incrementBy5(value) {
+        return value + 5; //implicit return
+    });
+    console.log(result1); // type of arrow function is object
+
+    let result2 = arr.map((value) => value+5);
+    console.log(result2); // type of arrow function is function
+</script>

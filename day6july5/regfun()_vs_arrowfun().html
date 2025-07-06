@@ -1,0 +1,20 @@
+<script>
+    function f1(){
+        console.log(this); // this refers to the global(window).
+    }
+    f1(); 
+    
+   // Arrow function
+        // Arrow functions do not have their own 'this' context.
+        // They inherit 'this' from the parent scope.
+        // In this case, 'this' refers to the global object (window in browsers).
+        // So, 'this' inside an arrow function is not the same as in a regular function.
+        // It does not create its own 'this' context.
+        // Instead, it uses the 'this' value from the surrounding lexical context.
+        // This is why 'this' in an arrow function behaves differently than in a regular function
+        let f2 = () => { 
+        console.log(this);
+    }
+    f2(); // this refers to the global(window).
+        
+</script>

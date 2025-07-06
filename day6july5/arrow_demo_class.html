@@ -1,0 +1,23 @@
+<script>
+    class user {
+        firstname = 'Virat';
+        lastname = 'Kohli';
+
+        fullname1() { // Regular function
+            console.log(this.firstname, this.lastname); // this = user
+            console.log('FullName1 : ', this);
+        }
+        fullname2 = () => { // Arrow function
+            console.log(this.firstname, this.lastname); // this = user
+            console.log('FullName2 : ', this);
+        }
+    }
+    let userobject = new user();// Create an instance of the user class
+    // Call the methods
+    // userobject.fullname1(); // Regular function
+    // userobject.fullname2(); // Arrow function
+
+    //setTimeout(userobject.fullname1, 1000); // Regular function is not working but
+    setTimeout(userobject.fullName1.bind(userobject), 4000); // Regular function with bind works
+    //setTimeout(userobject.fullname2, 1000); // Arrow function
+</script>

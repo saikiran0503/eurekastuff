@@ -1,0 +1,27 @@
+<script>
+    //Function declaration
+    add(10,20); //hoisting works
+    function add(a, b) { // function named
+        console.log(`addition of ${a} & ${b} is ${a + b}`);
+    }
+    add(30, 40);
+
+    //Function expression
+    //sub(20, 10); //hoisting does not work
+    var sub = function(a,b) { // function anonymous
+        console.log(`subtraction of ${a} & ${b} is ${a - b}`);
+    }
+    sub(50, 20); 
+
+    //self-invoking function
+    (function (a,b){
+        console.log(`multiplication of ${a} & ${b} is ${a * b}`);
+    })(5, 10); 
+
+    //Arrow function
+    var div = (a,b) => {
+        console.log(`division of ${a} & ${b} is ${a / b}`);
+    }
+    div(20, 10);
+
+</script>

@@ -1,0 +1,13 @@
+<script>
+    function f1() { // Regular function
+        //how the function is called
+        console.log(this);
+    }
+    f1(); // this refers to the global(window).
+
+    // Arrow function
+    let f2 = () => { //where the function is defined
+        console.log(this);
+    }
+    f2(); // this refers to the global(window).
+</script>
