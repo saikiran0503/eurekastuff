@@ -1,0 +1,11 @@
+<script>
+    let str = 'my name is saikiran enrolled for javascript class';
+
+    console.log(str.split(' ')); // n+1
+    console.log(str.split(''));  // ['m','y',' ','n','a','m','e',' ','i','s',' ','s','a','i','k','i','r','a','n',' ','e','n','r','o','l','l','e','d',' ','f','o','r',' ','j','a','v','a','s','c','r','i','p','t',' ','c','l','a','s','s']
+    console.log(str.split('enrolled'));  // ['my name is saikiran ', ' for javascript class']
+    console.log(str.split('Python'));  // ['my name is saikiran enrolled for javascript class']
+    console.log(str.split('my'));  // ['', ' name is saikiran enrolled for javascript class']
+    console.log(str.split('class')); // ['my name is saikiran enrolled for javascript ', '']
+
+</script>

@@ -1,12 +1,14 @@
 <html>
     <body>
-        <button onclick="f1()">click here </button>
+       <button onclick="f1()">click here </button>
     </body>
     <script>
         function f1(){
             console.log("Button clicked");
         }
-        (function () {
+        f1();
+        (function () 
+        {
             console.log("Self-invoking function executed");
         })();
     </script>

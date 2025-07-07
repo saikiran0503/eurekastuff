@@ -1,0 +1,65 @@
+<script>
+
+    //1.WAP to reverse a string
+    let str ='sachin'
+    console.log(str.split('')// Split the string into an array of characters
+    .reverse()// Reverse the array of characters
+    .join(''));// Join the reversed array back into a string
+
+    //2.WAP to reverse words
+    let str1 = 'this is javascript class'
+    console.log(str1.split(' ').reverse().join(' '));
+
+    //3.WAP to print a first letter of string in title case
+    console.log(str1.split(' ')
+    .map((word) => word // Convert the first character to uppercase and concatenate with the rest of the word
+    .charAt(0). // Convert the first character to uppercase
+    toUpperCase() + // Convert the first character to uppercase
+    word.slice(1)) // Concatenate with the rest of the word
+    .join(' '));// Join the words back into a single string
+
+    // 4.Find the first non-repeating character in the string
+    
+    let str2 = 'Entertainment';
+    for (char of str2) {
+        if (str2.indexOf(char) === str2.lastIndexOf(char)) {
+            console.log(char);
+            break;
+        }
+    }
+
+    //5.WAP find longest word in a string
+
+    console.log(str1.split(' ') // Split the string into an array of words
+    .reduce((a, b) => a.length > b.length // Compare the lengths of the words
+    ? a : b));// Return the longest word
+
+    //6.Wap to print account number with  given string
+    let str3 = '12345678987';
+    console.log(str3.replace( /[3-8]/g,'*'));
+
+    // console.log(str3.slice(0, 2) + // Take the first 2 characters
+    // '*'.repeat(str3.length - 6) + // Repeat '*' for the middle characters
+    // str3.slice(-2)); // Take the last 2 characters
+
+    //7. WAP to print Credit-card number
+
+    let str4 = '1111222233334444';
+    console.log(str4.replace(/(\d{4})(?=\d)/g, '$1-')); 
+    // \d matches a digit, {4} specifies exactly 4 digits, 
+    // (?=\d) which checks there is at least one more digit after the 4 digits.
+    // $1- replaces the matched 4 digits with a hyphen.
+
+    //8.WAP to check if 2 strings are anagram or not
+    let str5 = 'listen';
+    let str6 = 'silent';
+    let isAnagram = (str5.split('').sort().join('') === str6.split('').sort().join(''));
+    console.log(isAnagram ? 'Anagram' : 'Not Anagram');
+
+    //9.WAP to remove special character from a string
+    let str7 = 'Hello@World!123';
+
+
+
+
+</script>

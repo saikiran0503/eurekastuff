@@ -12,7 +12,8 @@
         // It does not create its own 'this' context.
         // Instead, it uses the 'this' value from the surrounding lexical context.
         // This is why 'this' in an arrow function behaves differently than in a regular function
-        let f2 = () => { 
+        let f2 = () => 
+        { 
         console.log(this);
     }
     f2(); // this refers to the global(window).
