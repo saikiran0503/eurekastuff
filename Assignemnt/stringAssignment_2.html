@@ -1,0 +1,101 @@
+<script>
+    //<!-- Print the occurence of each character in a string -->
+
+    let str1 = 'entertaiment';
+    let result = Countcharacter(str1); // Function to count characters in a string
+    function Countcharacter(str1) { 
+        let object = {};// Initialize an empty object to store character counts
+        for (let i=0;i<str1.length;i++)// Loop through each character in the string
+        {
+            let char = str1[i];// Get the current character
+            if (object[char]) { // If the character already exists in the object
+                object[char] += 1; // Increment its count
+            } else { 
+                object[char] = 1;// If the character does not exist, add it with a count of 1
+            }
+        }
+        return object;// Return the object containing character counts
+    }
+    console.log(result); // { e: 3, n: 2, t: 3, a: 2, r: 1, i: 1, m: 1 }
+    
+    
+   //Print the character which is repeated max no of times 
+   let str2 = 'Helloworld';
+   function maxOccurence(str2)
+   {
+       let object1 = Countcharacter(str2);
+       let maxChar = '';
+       let maxCount = 0;
+       for (let char in object1) 
+       {
+           if (object1[char] > maxCount) 
+           {
+               maxCount = object1[char];
+               maxChar = char;
+           }
+       }
+       return maxChar;
+   }
+   console.log(maxOccurence(str2)); // Function to find the character with maximum occurrence
+
+   //Swap The case for Each Character in a string 
+   let str3 = 'HelloWorld';
+   function swap(str3)
+   {
+    let afterSwap = ' ';// Initialize an empty string to store the result
+    for(let i = 0;i<str3.length;i++){
+        let char1 = str3[i];// Get the current character
+        if (char1 === char1.toUpperCase())// Check if the character is uppercase
+        {
+            afterSwap += char1.toLowerCase();// Convert it to lowercase and append to the result
+        } else {
+            afterSwap += char1.toUpperCase();// Convert it to uppercase and append to the result
+        }
+    }
+    return afterSwap;// Return the modified string with swapped cases
+   }
+   console.log(swap(str3));
+   
+//Print the Abbreviation for a string
+
+let str4 = 'Rabindra Nath Tagore';
+function abbreviation(str4)
+{
+    let letters = str4.split(' ');// Split the string into an array of words
+    let abbofop = '';// Initialize an empty string to store the abbreviation
+    for (let i=0;i<letters.length;i++)// Loop through each word in the array
+    {
+        if (i === 0 || i === 1) // Check if the word is the first or second word
+        {
+            abbofop += letters[i][0].toUpperCase() + '. ';// Append the first letter of the word in uppercase followed by a dot
+        } 
+        else 
+        {
+            abbofop += letters[i].toLowerCase();// Append the entire word in lowercase
+        }
+    }
+    return abbofop;
+}
+console.log(abbreviation(str4));
+
+//Shift the characters by the next character
+   //input:  'abcxyz'
+   //output: 'bcdyza'
+    let str5 = 'abcxyz';
+    function shift()
+    {
+        let shifted = '';
+        for (let i = 0; i < str5.length; i++) {
+            let nextChar = String.fromCharCode(str5.charCodeAt(i) + 1);
+            shifted += nextChar;
+        }
+        return shifted;
+    }
+    condole.log(shift());
+
+
+
+</script>
+
+
+   
