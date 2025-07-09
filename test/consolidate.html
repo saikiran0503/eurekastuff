@@ -1,0 +1,51 @@
+<script>
+    employees = [
+        { eId: 101, name: "sanjay", hours: 3 },
+        { eId: 102, name: "deepak", hours: 2 },
+        { eId: 103, name: "ajay", hours: 4 }, // monday
+        { eId: 102, name: "deepak", hours: 3 },
+        { eId: 103, name: "ajay", hours: 3 }, // tuesday
+        { eId: 101, name: "sanjay", hours: 2 },
+        { eId: 102, name: "deepak", hours: 4 }, //wednesday
+    ];
+
+
+let res1 = [];
+employees.reduce((v1,v2) => {
+    let emp = v1.find(employees => employees.eId === v2.eId);
+    if(emp) {
+        emp.hours += v2.hours;
+    } else {
+        v1.push(v2);
+    }
+    return v1;
+}, res1);
+console.log(res1);
+
+// const input = ["eat", "tea", "tan", "ate", "nat", "bat"];
+//     console.log(groupAnagrams(input));
+    // Output: [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
+
+// function groupAnagrams(str)
+// {
+//     let res = {};
+
+//     for (const word of str){
+
+//     const sorted = word.split('').sort().join('');
+
+//     if 
+// }
+
+
+function rotateArray(arrdup,k)
+{
+    const end = arrdup.slice(arrdup.length-k);
+    const start = arrdup.slice(0,arrdup.length-k);
+    return end.concat(start);
+}
+const arr5 = [1, 2, 3, 4, 5, 6, 7];
+const k = 3;
+console.log(rotateArray(arr5, k)); // Output: [5, 6, 7, 1, 2, 3, 4]
+
+</script>

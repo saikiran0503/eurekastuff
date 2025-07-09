@@ -16,12 +16,12 @@
         }
         return object;// Return the object containing character counts
     }
-    console.log(result); // { e: 3, n: 2, t: 3, a: 2, r: 1, i: 1, m: 1 }
+    console.log(result);
     
     
    //Print the character which is repeated max no of times 
    let str2 = 'Helloworld';
-   function maxOccurence(str2)
+   function repeat(str2)
    {
        let object1 = Countcharacter(str2);
        let maxChar = '';
@@ -36,7 +36,7 @@
        }
        return maxChar;
    }
-   console.log(maxOccurence(str2)); // Function to find the character with maximum occurrence
+   console.log(maxrepeat(str2)); // Function to find the character with maximum occurrence
 
    //Swap The case for Each Character in a string 
    let str3 = 'HelloWorld';
@@ -79,21 +79,25 @@ function abbreviation(str4)
 console.log(abbreviation(str4));
 
 //Shift the characters by the next character
-   //input:  'abcxyz'
-   //output: 'bcdyza'
-    let str5 = 'abcxyz';
-    function shift()
+   
+    let str5 = 'abcxyz'; 
+    function shiftchar()
     {
-        let shifted = '';
+        let shifted = '';// Initialize an empty string to store the shifted characters
         for (let i = 0; i < str5.length; i++) {
             let nextChar = String.fromCharCode(str5.charCodeAt(i) + 1);
             shifted += nextChar;
         }
         return shifted;
     }
-    condole.log(shift());
+    console.log(shiftchar());
 
-
+ let arr =[10,20,30,40,50];
+ for (let i =0;i<arr.length;i++)
+ {
+    sum(arr[i]);
+ }
+ console.log(sum);
 
 </script>
 

@@ -1,0 +1,75 @@
+<script>
+    let str = 'Sai Kiran Tirumalasetty';
+
+    document.write(str.length);
+    document.write(str.toUpperCase());
+    document.write(str.toLowerCase());
+    console.log(str.concat('from Penn state'));
+
+    document.write(str.charAt(1));
+    document.write(str.at(1));
+    console.log(str.charAt(-2)); //not working
+    console.log(str.at(-2));
+
+    console.log(str.charCodeAt(1)); //a = 101
+    
+    console.log(str.indexOf('Sai')); //4
+    console.log(str.lastIndexOf('Kiran'));//4
+    console.log(str.lastIndexOf('Tirumalasetty'));
+
+    //
+    console.log(str.includes('Hello'));//false
+    console.log(str.includes('Kiran'));//true
+
+    //
+    console.log(str.match(/ran/));
+    console.log(str.match(/t/g));
+    console.log(str.match(/t/gi));
+
+    let str2 = "The 78 rain 34 in Spain 98 stays 986 mainly in the plain"
+    console.log(str2.match(/[0-9]{1,3}/g));
+    console.log(str2.matchAll(/ain/g));
+
+    console.log(str2.replace('Spain','sai'));
+    console.log(str2.replaceAll('ain','br'));
+    console.log(str2.replace(/sta/g,'session-'));
+
+    console.log(str.repeat(3));
+    //slice
+    //substring
+    console.log(str.slice(8,12));
+    console.log(str.substring(8,12));
+
+    console.log(str.slice(-15,-11));
+    console.log(str.substring(-15,-11));
+    console.log(str.substr(5,10));
+
+    console.log(str.split('')); //single letter
+    console.log(str.split(' '));//one word
+    console.log(str.split('Kiran')); //split by middle name
+    console.log(str.split('Sai'));// split by first name
+    console.log(str.split('Tirumalasetty')); //split by last name
+
+
+
+    console.log(str.search('Ti'));
+    console.log(str.trim());
+    console.log(str.localeCompare(''));
+    
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+</script>
