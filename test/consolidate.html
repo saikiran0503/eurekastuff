@@ -38,14 +38,45 @@ console.log(res1);
 // }
 
 
-function rotateArray(arrdup,k)
-{
-    const end = arrdup.slice(arrdup.length-k);
-    const start = arrdup.slice(0,arrdup.length-k);
-    return end.concat(start);
-}
-const arr5 = [1, 2, 3, 4, 5, 6, 7];
-const k = 3;
-console.log(rotateArray(arr5, k)); // Output: [5, 6, 7, 1, 2, 3, 4]
+// function rotateArray(arrdup,k)
+// {
+//     const end = arrdup.slice(arrdup.length-k);
+//     const start = arrdup.slice(0,arrdup.length-k);
+//     return end.concat(start);
+// }
+// const arr5 = [1, 2, 3, 4, 5, 6, 7];
+// const k = 3;
+// console.log(rotateArray(arr5, k)); // Output: [5, 6, 7, 1, 2, 3, 4]
+
+
+let cars = ['tata','maruthi','toyota'];
+
+cars.forEach(val => console.log(val));
+
+ let arr = [10, 20, 30, 40, 50];
+    arr.splice(1, 3, 25, 35); // splice(index,deletecount,new items)
+    console.log(arr);
+
+let nums = [10, 20, 30, 40, 50];
+nums.toSpliced(1, 3, 25, 35);
+    console.log(nums);
+
+    nums = [10, 20, 30, 40, 50];
+    console.log(nums.slice(0,3));
+
+    // console.log(nums.filter(3));
+
+    let arr1= [10, 20, 30, 40, 50];
+    let newArr = arr1.map((ele) => ele + 5);
+    console.log(arr1, newArr);
+
+    let arr2 = [10, 50, 30, 40, 20];
+    //console.log(arr2);
+
+    arr2.sort();
+    console.log(arr2);
+
+    // arr2.reverse();
+    // console.log(arr2)
 
 </script>

@@ -1,0 +1,39 @@
+<script>
+    function test(a,b,...c){
+        let res = 0;
+        for(ele in res){
+            res = res+sum;
+
+        }
+        test(10,20,30,40,50)
+    
+    }
+
+    arr1 = ['Arun','Kiran'];
+
+    let arr2=arr1;
+
+    arr1.push('Praveen');
+    arr2.push('bharath');
+
+    console.log(arr1,arr2);
+
+    arr3 = ['Arun','Kiran',['praveen']];
+    arr4 = [...arr3];
+
+    arr3.push('bharath');
+    arr3[2].push('bhargav');
+    console.log(arr3,arr4);
+
+    arr5 = ['Arun','Kiran',['praveen']];
+    let arr6 = structuredClone(arr5);
+    arr5.push('bharath');
+    console.log(arr5,arr6);
+
+
+    
+    
+
+
+
+</script>
