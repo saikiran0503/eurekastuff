@@ -1,0 +1,22 @@
+<script>
+    class student
+    {
+        constructor(name,rollno,course)
+        {
+            this.name = name;
+            this.rollno = rollno;
+            this.course = course;
+        }
+    }
+    class academics extends student
+    {
+        constructor(name,rollno,course,sub,marks)
+        {
+            super(name,rollno,course);
+            this.sub = sub;
+            this.marks = marks;
+        }
+    }
+    let alldetails = new academics('sai',21,'cse','java',570);
+    console.log(alldetails);
+</script>

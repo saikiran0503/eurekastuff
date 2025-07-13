@@ -1,0 +1,19 @@
+<script>
+    let obj1 = { a:10,b:20};
+    obj1.c = 30; //adding value into obj  - yes
+    delete obj1.b;//deleting the value - yes
+    obj1.c = 35; //updating the value  - yes
+    console.log(obj1);
+
+    // if we use the seal()
+    let obj2 = { a:20,b:40};
+    Object.seal(obj2)
+    obj2.c = 60; //adding value into obj - no
+    delete obj2.b;//deleting the value - no
+    obj2.b = 80; //updating the value - yes
+    console.log(obj2);
+
+     console.log(Object.isSealed(obj1)); // false
+    console.log(Object.isSealed(obj2)); // true
+
+</script>

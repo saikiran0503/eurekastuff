@@ -1,0 +1,36 @@
+<script>
+    class student
+    {
+        constructor(roll,name,course)
+        {
+            this.roll = roll;
+            this.name = name;
+            this.course = course;
+        }
+    }
+    student.prototype.clgname = 'concordia';
+
+    let stud1 = new student(101,'sai','javascript');
+    console.log(stud1.name,stud1.course,stud1.clgname);
+
+    let stud2 = new student(102,'kiran', 'dotnet');
+    console.log(stud2.name,stud2.course,stud2.clgname);
+
+    console.log(stud1);
+    console.log(stud2);
+
+    stud1.clgname = 'Concordia University';
+
+    console.log(stud1.name,stud1.course,stud1.clgname);
+
+    console.log(stud2.name,stud2.course,stud2.clgname);
+
+    console.log('name' in stud1); // true
+    console.log(stud1.hasOwnProperty('name')); // true
+
+    console.log('clgname' in stud2); // true
+    console.log(stud2.hasOwnProperty('clgname')); // false
+
+    console.log('dob' in stud2); // false
+    console.log(stud2.hasOwnProperty('dob')); //false
+</script>

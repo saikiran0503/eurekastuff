@@ -1,0 +1,19 @@
+<script>
+    let obj1 = { a:10,b:20};
+    obj1.c = 30; //adding value into obj
+    delete obj1.b;//deleting the value
+    obj1.c = 35; //updating the value 
+    console.log(obj1);
+
+    // if we use the freeze()
+    let obj2 = { a:20,b:40};
+    Object.freeze(obj2)
+    obj2.c = 60; //adding value into obj - no
+    delete obj2.b;//deleting the value - no
+    obj2.c = 80; //updating the value - no
+    console.log(obj2);
+
+     console.log(Object.isFrozen(obj1)); // false
+    console.log(Object.isFrozen(obj2)); // true
+
+</script>
